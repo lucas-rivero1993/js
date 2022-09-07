@@ -42,6 +42,8 @@
 // console.log(VenderProducto());
 function Producto(nombre,precio,talle){
 
+    let productoPublicado = [];
+
     let productitos = {
 
         nombre : nombre,
@@ -49,21 +51,22 @@ function Producto(nombre,precio,talle){
         talle : talle,
     }
 
- 
-
-    productitos.nombre = prompt('ingrese el nombre del producto'),
-    productitos.precio = prompt('ingresa el precio del producto'),
-    productitos.talle =  prompt('ingresa el talle del producto')
+    productitos.nombre = prompt('Ingrese el nombre del producto a publicar.'),
+    productitos.precio = prompt('Ingrese el precio del producto a publicar.'),
+    productitos.talle =  prompt('Ingrese el talle del producto a publicar.')
 
 
     while(productitos.nombre === "" && productitos.precio === "" && productitos.talle === ""){
-        alert('completa la informacion del producto.');
-        productitos.nombre = prompt('ingrese el nombre del producto'),
-        productitos.precio = prompt('ingresa el precio del producto'),
-        productitos.talle =  prompt('ingresa el talle del producto')
+        alert('Completa la informacion del producto a publicar.');
+        productitos.nombre = prompt('ingrese el nombre del producto a publicar.'),
+        productitos.precio = prompt('Ingrese el precio del producto a publicar.'),
+        productitos.talle =  prompt('Ingrese el talle del producto a publicar.')
     }
 
+    productoPublicado.push(productitos);
+
     console.log(productitos);
+    console.log(productoPublicado);
 
 }
 
